@@ -1,0 +1,1871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#C1272D">
+    
+    <!-- Primary Meta Tags -->
+    <title>QIU-Ventures | Indonesia's Premier Quantum AI Venture Builder</title>
+    <meta name="title" content="QIU-Ventures | Indonesia's Premier Quantum AI Venture Builder">
+    <meta name="description" content="Indonesia's first venture builder dedicated to Quantum AI and deep-tech. We transform rigorous research into investable companies. Join our portfolio: RantAI, Dirac, Gaussian, and Nexus Quantum.">
+    <meta name="keywords" content="quantum computing, quantum AI, venture builder, Indonesia, deep tech, post-quantum cryptography, PQC, quantum algorithms, AI ventures, startup incubator, quantum startup, venture studio">
+    <meta name="author" content="QIU-Ventures">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://qiu-ventures.com/">
+    <meta property="og:title" content="QIU-Ventures | Indonesia's Premier Quantum AI Venture Builder">
+    <meta property="og:description" content="Transform rigorous research into investable Quantum-AI companies. Venture Studio • Founder-in-Residence • Corporate Co-Build">
+    <meta property="og:image" content="https://qiu-ventures.com/qventures.png">
+    <meta property="og:site_name" content="QIU-Ventures">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://qiu-ventures.com/">
+    <meta name="twitter:title" content="QIU-Ventures | Indonesia's Premier Quantum AI Venture Builder">
+    <meta name="twitter:description" content="Transform rigorous research into investable Quantum-AI companies. Venture Studio • Founder-in-Residence • Corporate Co-Build">
+    <meta name="twitter:image" content="https://qiu-ventures.com/qventures.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://qiu-ventures.com/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="qventures.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="qventures.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="qventures.png">
+    <link rel="manifest" href="data:application/json,{&quot;name&quot;:&quot;QIU-Ventures&quot;,&quot;short_name&quot;:&quot;QIU&quot;,&quot;icons&quot;:[{&quot;src&quot;:&quot;qventures.png&quot;,&quot;sizes&quot;:&quot;192x192&quot;,&quot;type&quot;:&quot;image/png&quot;}],&quot;theme_color&quot;:&quot;#C1272D&quot;,&quot;background_color&quot;:&quot;#FFFFFF&quot;}">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "QIU-Ventures",
+      "description": "Indonesia's first venture builder dedicated to Quantum AI and deep-tech innovation",
+      "url": "https://qiu-ventures.com",
+      "logo": "https://qiu-ventures.com/qventures.png",
+      "foundingLocation": {
+        "@type": "Country",
+        "name": "Indonesia"
+      },
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "email": "founders@qiu.ventures",
+        "contactType": "Founders Program"
+      }, {
+        "@type": "ContactPoint",
+        "email": "partners@qiu.ventures",
+        "contactType": "Partnerships"
+      }],
+      "sameAs": []
+    }
+    </script>
+    
+    <style>
+        /* ========================================
+           CSS VARIABLES & RESET
+           ======================================== */
+        :root {
+            /* Primary Colors */
+            --primary-red: #C1272D;
+            --primary-red-dark: #A01F23;
+            --primary-red-light: #D93640;
+            
+            /* Neutrals */
+            --dark-900: #1A1A1A;
+            --dark-800: #2C2C2C;
+            --dark-700: #3D3D3D;
+            --gray-600: #6B7280;
+            --gray-500: #9CA3AF;
+            --gray-400: #D1D5DB;
+            --gray-300: #E5E7EB;
+            --gray-200: #F3F4F6;
+            --gray-100: #F9FAFB;
+            --white: #FFFFFF;
+            
+            /* Functional */
+            --success: #10B981;
+            --warning: #F59E0B;
+            --info: #3B82F6;
+            
+            /* Spacing Scale */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+            --space-2xl: 4rem;
+            --space-3xl: 6rem;
+            
+            /* Typography Scale */
+            --text-xs: 0.75rem;
+            --text-sm: 0.875rem;
+            --text-base: 1rem;
+            --text-lg: 1.125rem;
+            --text-xl: 1.25rem;
+            --text-2xl: 1.5rem;
+            --text-3xl: 1.875rem;
+            --text-4xl: 2.25rem;
+            --text-5xl: 3rem;
+            --text-6xl: 3.75rem;
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            
+            /* Border Radius */
+            --radius-sm: 0.375rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+            --radius-xl: 1rem;
+            --radius-2xl: 1.5rem;
+            --radius-full: 9999px;
+            
+            /* Transitions */
+            --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+            
+            /* Z-Index Scale */
+            --z-dropdown: 1000;
+            --z-sticky: 1020;
+            --z-fixed: 1030;
+            --z-modal-backdrop: 1040;
+            --z-modal: 1050;
+            --z-tooltip: 1070;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-800);
+            background: var(--white);
+            overflow-x: hidden;
+        }
+
+        /* ========================================
+           UTILITY CLASSES
+           ======================================== */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 var(--space-lg);
+        }
+
+        .container-narrow {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 var(--space-lg);
+        }
+
+        .text-center { text-align: center; }
+        .text-gradient {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red-dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ========================================
+           ACCESSIBILITY
+           ======================================== */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-red);
+            color: var(--white);
+            padding: var(--space-sm) var(--space-md);
+            text-decoration: none;
+            z-index: var(--z-tooltip);
+            border-radius: 0 0 var(--radius-md) 0;
+            font-weight: 600;
+            transition: top var(--transition-fast);
+        }
+        
+        .skip-link:focus {
+            top: 0;
+            outline: 3px solid var(--primary-red-dark);
+            outline-offset: 2px;
+        }
+
+        *:focus-visible {
+            outline: 2px solid var(--primary-red);
+            outline-offset: 2px;
+        }
+
+        /* ========================================
+           HEADER & NAVIGATION
+           ======================================== */
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: var(--z-sticky);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--gray-300);
+            transition: all var(--transition-base);
+        }
+
+        .header.scrolled {
+            box-shadow: var(--shadow-lg);
+            background: rgba(255, 255, 255, 0.98);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-md) 0;
+        }
+
+        .logo-link {
+            display: block;
+            transition: opacity var(--transition-fast);
+        }
+
+        .logo-link:hover {
+            opacity: 0.8;
+        }
+
+        .logo {
+            height: 60px;
+            width: auto;
+            display: block;
+            transition: height var(--transition-base);
+        }
+
+        .nav {
+            display: flex;
+            gap: var(--space-xl);
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--dark-800);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: var(--text-sm);
+            position: relative;
+            padding: var(--space-xs) 0;
+            transition: color var(--transition-fast);
+            letter-spacing: -0.01em;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-red);
+            transition: width var(--transition-base);
+        }
+
+        .nav-link:hover {
+            color: var(--primary-red);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--primary-red);
+            color: var(--white) !important;
+            padding: var(--space-xs) var(--space-lg);
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            transition: all var(--transition-base);
+        }
+
+        .nav-cta::after {
+            display: none;
+        }
+
+        .nav-cta:hover {
+            background: var(--primary-red-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: var(--space-xs);
+            z-index: var(--z-modal);
+            position: relative;
+        }
+
+        .mobile-menu-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--dark-800);
+            margin: 5px 0;
+            transition: all var(--transition-base);
+            border-radius: var(--radius-sm);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        /* ========================================
+           HERO SECTION
+           ======================================== */
+        .hero {
+            position: relative;
+            padding: var(--space-3xl) 0;
+            background: linear-gradient(180deg, var(--gray-100) 0%, var(--white) 100%);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(193, 39, 45, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(193, 39, 45, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            background: var(--white);
+            border: 1px solid var(--gray-300);
+            padding: var(--space-xs) var(--space-md);
+            border-radius: var(--radius-full);
+            font-size: var(--text-sm);
+            font-weight: 600;
+            color: var(--primary-red);
+            margin-bottom: var(--space-lg);
+            box-shadow: var(--shadow-sm);
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .hero-badge::before {
+            content: '●';
+            color: var(--success);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: var(--space-lg);
+            color: var(--dark-900);
+            letter-spacing: -0.03em;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.125rem, 2vw, 1.375rem);
+            color: var(--gray-600);
+            margin-bottom: var(--space-xl);
+            line-height: 1.7;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1.2s ease-out 0.6s both;
+        }
+
+        /* ========================================
+           BUTTONS
+           ======================================== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--radius-lg);
+            font-size: var(--text-base);
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all var(--transition-base);
+            letter-spacing: -0.01em;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn-primary {
+            background: var(--primary-red);
+            color: var(--white);
+            box-shadow: 0 4px 14px rgba(193, 39, 45, 0.25);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-red-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(193, 39, 45, 0.35);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary-red);
+            border: 2px solid var(--primary-red);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-red);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--gray-600);
+            border: 1px solid var(--gray-300);
+        }
+
+        .btn-ghost:hover {
+            background: var(--gray-100);
+            border-color: var(--primary-red);
+            color: var(--primary-red);
+        }
+
+        /* ========================================
+           STATS BAR
+           ======================================== */
+        .stats-bar {
+            background: var(--white);
+            border-top: 1px solid var(--gray-300);
+            border-bottom: 1px solid var(--gray-300);
+            padding: var(--space-xl) 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-xl);
+            text-align: center;
+        }
+
+        .stat-item {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        .stat-number {
+            font-size: var(--text-4xl);
+            font-weight: 800;
+            color: var(--primary-red);
+            display: block;
+            margin-bottom: var(--space-xs);
+        }
+
+        .stat-label {
+            font-size: var(--text-sm);
+            color: var(--gray-600);
+            font-weight: 500;
+        }
+
+        /* ========================================
+           SECTION STYLES
+           ======================================== */
+        section {
+            padding: var(--space-3xl) 0;
+            position: relative;
+        }
+
+        .section-alt {
+            background: var(--gray-100);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-3xl);
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: rgba(193, 39, 45, 0.1);
+            color: var(--primary-red);
+            padding: var(--space-xs) var(--space-md);
+            border-radius: var(--radius-full);
+            font-size: var(--text-sm);
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            margin-bottom: var(--space-md);
+            color: var(--dark-900);
+            letter-spacing: -0.03em;
+            line-height: 1.2;
+        }
+
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+            color: var(--dark-800);
+            letter-spacing: -0.02em;
+        }
+
+        h4 {
+            font-size: var(--text-xl);
+            font-weight: 700;
+            margin-bottom: var(--space-sm);
+            color: var(--dark-800);
+            letter-spacing: -0.01em;
+        }
+
+        .section-description {
+            font-size: var(--text-lg);
+            color: var(--gray-600);
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* ========================================
+           CARD COMPONENTS
+           ======================================== */
+        .card {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
+            border: 1px solid var(--gray-300);
+            transition: all var(--transition-slow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-red) 0%, var(--primary-red-light) 100%);
+            transform: scaleX(0);
+            transition: transform var(--transition-slow);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-2xl);
+            border-color: rgba(193, 39, 45, 0.2);
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        /* ========================================
+           VALUES SECTION
+           ======================================== */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-lg);
+        }
+
+        .value-card {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
+            border: 1px solid var(--gray-300);
+            transition: all var(--transition-slow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .value-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red-dark) 100%);
+            color: var(--white);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--text-3xl);
+            font-weight: 800;
+            margin-bottom: var(--space-lg);
+            box-shadow: 0 8px 16px rgba(193, 39, 45, 0.2);
+        }
+
+        .value-title {
+            font-size: var(--text-xl);
+            font-weight: 700;
+            margin-bottom: var(--space-sm);
+            color: var(--dark-900);
+        }
+
+        .value-tagline {
+            font-size: var(--text-base);
+            color: var(--dark-800);
+            margin-bottom: var(--space-sm);
+            font-weight: 600;
+        }
+
+        .value-description {
+            font-size: var(--text-sm);
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        /* ========================================
+           PORTFOLIO SECTION
+           ======================================== */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--space-lg);
+        }
+
+        .portfolio-card {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
+            border: 1px solid var(--gray-300);
+            transition: all var(--transition-slow);
+        }
+
+        .portfolio-card h4 {
+            color: var(--primary-red);
+            font-size: var(--text-2xl);
+            margin-bottom: var(--space-md);
+        }
+
+        /* ========================================
+           VENTURE CARDS (ENHANCED)
+           ======================================== */
+        .venture-card {
+            background: var(--white);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-2xl);
+            border: 2px solid var(--gray-300);
+            margin-bottom: var(--space-xl);
+            transition: all var(--transition-slow);
+            position: relative;
+        }
+
+        .venture-card::after {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: linear-gradient(135deg, var(--primary-red), var(--primary-red-light));
+            border-radius: var(--radius-2xl);
+            opacity: 0;
+            z-index: -1;
+            transition: opacity var(--transition-slow);
+        }
+
+        .venture-card:hover {
+            transform: translateY(-4px);
+            border-color: transparent;
+            box-shadow: var(--shadow-2xl);
+        }
+
+        .venture-card:hover::after {
+            opacity: 1;
+        }
+
+        .venture-card:hover .venture-name,
+        .venture-card:hover .venture-tagline,
+        .venture-card:hover .venture-description,
+        .venture-card:hover .venture-link {
+            color: var(--white);
+        }
+
+        .venture-header {
+            margin-bottom: var(--space-lg);
+        }
+
+        .venture-name {
+            font-size: var(--text-4xl);
+            font-weight: 800;
+            color: var(--primary-red);
+            margin-bottom: var(--space-xs);
+            letter-spacing: -0.02em;
+        }
+
+        .venture-tagline {
+            font-size: var(--text-lg);
+            color: var(--dark-800);
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+        }
+
+        .venture-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            color: var(--primary-red);
+            text-decoration: none;
+            font-size: var(--text-sm);
+            font-weight: 600;
+            transition: gap var(--transition-base);
+        }
+
+        .venture-link:hover {
+            gap: var(--space-sm);
+        }
+
+        .venture-description {
+            color: var(--gray-600);
+            line-height: 1.8;
+            margin-bottom: var(--space-md);
+            font-size: var(--text-base);
+        }
+
+        /* ========================================
+           PROCESS CARDS
+           ======================================== */
+        .process-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-2xl);
+            border-color: var(--primary-red);
+        }
+
+        .process-card:hover .process-number {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(193, 39, 45, 0.4);
+        }
+
+        /* ========================================
+           TIMELINE / GATES
+           ======================================== */
+        .timeline {
+            position: relative;
+            padding-left: 28px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--primary-red) 0%, var(--gray-300) 100%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: var(--space-xl);
+            padding-left: calc(28px + 20px);
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translateX(-50%);
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red-dark) 100%);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: var(--text-xl);
+            box-shadow: 0 4px 12px rgba(193, 39, 45, 0.3);
+            transition: transform var(--transition-base);
+        }
+
+        .timeline-item:hover .timeline-marker {
+            transform: translateX(-50%) scale(1.15);
+        }
+
+        /* ========================================
+           FAQ ACCORDION
+           ======================================== */
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            margin-bottom: var(--space-md);
+            border: 1px solid var(--gray-300);
+            transition: all var(--transition-base);
+        }
+
+        .faq-item:hover {
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-red);
+        }
+
+        .faq-question {
+            font-size: var(--text-lg);
+            font-weight: 700;
+            color: var(--dark-800);
+            margin-bottom: var(--space-sm);
+        }
+
+        .faq-answer {
+            color: var(--gray-600);
+            line-height: 1.8;
+        }
+
+        /* ========================================
+           CONTACT SECTION
+           ======================================== */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-lg);
+        }
+
+        .contact-card {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: var(--space-2xl);
+            border: 2px solid var(--gray-300);
+            text-align: center;
+            transition: all var(--transition-slow);
+        }
+
+        .contact-card:hover {
+            border-color: var(--primary-red);
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-2xl);
+        }
+
+        .contact-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red-dark) 100%);
+            color: var(--white);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--text-2xl);
+            margin: 0 auto var(--space-lg);
+        }
+
+        .contact-card h4 {
+            margin-bottom: var(--space-md);
+        }
+
+        .contact-card a {
+            color: var(--primary-red);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: var(--text-lg);
+            transition: color var(--transition-fast);
+        }
+
+        .contact-card a:hover {
+            color: var(--primary-red-dark);
+        }
+
+        /* ========================================
+           FOOTER
+           ======================================== */
+        footer {
+            background: var(--dark-900);
+            color: var(--white);
+            padding: var(--space-2xl) 0;
+            margin-top: var(--space-3xl);
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .footer-content p {
+            opacity: 0.8;
+            margin-bottom: var(--space-lg);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-xl);
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity var(--transition-fast);
+            font-size: var(--text-sm);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        /* ========================================
+           ANIMATIONS
+           ======================================== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        /* ========================================
+           RESPONSIVE DESIGN
+           ======================================== */
+        @media (max-width: 768px) {
+            /* Navigation */
+            .nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 300px;
+                height: 100vh;
+                background: var(--white);
+                flex-direction: column;
+                padding: var(--space-3xl) var(--space-lg);
+                gap: var(--space-lg);
+                box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+                transition: right var(--transition-slow);
+                overflow-y: auto;
+                align-items: flex-start;
+            }
+
+            .nav.active {
+                right: 0;
+            }
+
+            .nav-link {
+                font-size: var(--text-lg);
+                width: 100%;
+                padding: var(--space-sm) 0;
+                border-bottom: 1px solid var(--gray-200);
+            }
+
+            .nav-cta {
+                width: 100%;
+            text-align: center;
+                justify-content: center;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            /* Hero */
+            .hero {
+                padding: var(--space-2xl) 0;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            /* Logo */
+            .logo {
+                height: 40px;
+            }
+
+            /* Sections */
+            section {
+                padding: var(--space-2xl) 0;
+            }
+
+            /* Grids */
+            .values-grid,
+            .portfolio-grid,
+            .contact-grid,
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-lg);
+            }
+
+            /* Timeline */
+            .timeline {
+                padding-left: var(--space-lg);
+            }
+
+            .timeline::before {
+                left: 18px;
+            }
+
+            .timeline-marker {
+                width: 40px;
+                height: 40px;
+                font-size: var(--text-base);
+            }
+
+            .timeline-item {
+                padding-left: var(--space-lg);
+            }
+
+            /* Container */
+            .container,
+            .container-narrow {
+                padding: 0 var(--space-md);
+            }
+        }
+
+        /* Small mobile */
+        @media (max-width: 480px) {
+            .container,
+            .container-narrow {
+                padding: 0 var(--space-sm);
+            }
+
+            .card,
+            .value-card,
+            .portfolio-card,
+            .venture-card {
+                padding: var(--space-lg);
+            }
+
+            .hero-badge {
+                font-size: var(--text-xs);
+            }
+        }
+
+        /* Tablet landscape */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Touch devices */
+        @media (hover: none) and (pointer: coarse) {
+            .btn,
+            .nav-link,
+            .footer-links a {
+                min-height: 44px;
+                min-width: 44px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Print */
+        @media print {
+            .header,
+            .mobile-menu-toggle,
+            .hero-cta,
+            footer {
+                display: none;
+            }
+
+            section {
+                page-break-inside: avoid;
+            }
+        }
+
+        /* High contrast mode */
+        @media (prefers-contrast: high) {
+            .card,
+            .value-card,
+            .portfolio-card {
+                border-width: 2px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to main content -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header" id="header" role="banner">
+        <div class="container">
+            <div class="header-inner">
+                <a href="#" class="logo-link" aria-label="QIU-Ventures Home">
+                <img src="qventures.png" alt="QIU-Ventures" class="logo">
+                </a>
+                <nav class="nav" id="mainNav" role="navigation" aria-label="Main navigation">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#values" class="nav-link">Values</a>
+                    <a href="#thesis" class="nav-link">Thesis</a>
+                    <a href="#programs" class="nav-link">Programs</a>
+                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                    <a href="#contact" class="nav-cta">Apply Now</a>
+                </nav>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        Indonesia's First Quantum AI Venture Builder
+                    </div>
+                <h1>Building Indonesia's<br>Quantum AI Future</h1>
+                    <p class="hero-subtitle">We transform rigorous research and world-class engineering into investable companies. From lab to market, we de-risk deep-tech ventures through systematic, scientific methods.</p>
+                    <div class="hero-cta">
+                        <a href="#application" class="btn btn-primary">Start Your Venture →</a>
+                    <a href="#contact" class="btn btn-secondary">Partner with Us</a>
+                        <a href="#thesis" class="btn btn-ghost">Explore Our Thesis</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+        <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">4+</span>
+                        <span class="stat-label">Active Ventures</span>
+            </div>
+                    <div class="stat-item">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">Focus Areas</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Programs</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">FAST</span>
+                        <span class="stat-label">Core Values</span>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container-narrow">
+                <div class="section-header">
+                    <span class="section-badge">Who We Are</span>
+                    <h2>About QIU-Ventures</h2>
+                    <p class="section-description">Indonesia's first venture builder focused on Quantum AI and adjacent deep-tech. We combine scientific rigor, product craftsmanship, and company-building discipline.</p>
+        </div>
+
+                <div style="margin-top: var(--space-2xl);">
+                    <h3>Our Mission</h3>
+                    <p style="color: var(--gray-600); line-height: 1.8; margin-bottom: var(--space-xl);">To identify foundational problems, assemble world-class teams, and de-risk deep-tech from lab to market using a systematic, scientific venture-building method.</p>
+
+                    <h3>Our Vision</h3>
+                    <p style="color: var(--gray-600); line-height: 1.8;">A world where Indonesia originates breakthrough Quantum-AI companies that set global standards.</p>
+                </div>
+        </div>
+    </section>
+
+        <!-- FAST Values -->
+        <section id="values" class="section-alt">
+        <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">Our DNA</span>
+                    <h2>FAST Core Values</h2>
+                    <p class="section-description">The principles that guide every venture we build</p>
+                </div>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">F</div>
+                    <div class="value-title">FOCUS</div>
+                    <div class="value-tagline">Collapse uncertainty into outcomes.</div>
+                        <div class="value-description">We define sharp targets, commit sequentially, and ship. No distractions, only execution.</div>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">A</div>
+                    <div class="value-title">ALIGNMENT</div>
+                    <div class="value-tagline">Entangle goals and people.</div>
+                        <div class="value-description">We design shared roadmaps, clear roles, and transparent milestones that keep everyone moving together.</div>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">S</div>
+                    <div class="value-title">SCIENTIFIC</div>
+                    <div class="value-tagline">Hypothesize, test, learn, iterate.</div>
+                        <div class="value-description">Data over opinions, experiments over assumptions. Every decision is evidence-based.</div>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">T</div>
+                    <div class="value-title">TALENT</div>
+                    <div class="value-tagline">Place unique strengths where they compound.</div>
+                        <div class="value-description">Tailored roles, accelerated growth, and durable teams that outperform the market.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Thesis -->
+        <section id="thesis">
+        <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">Investment Thesis</span>
+                    <h2>Why Now, Why Here</h2>
+                    <p class="section-description">The convergence of quantum computing, AI, and Indonesia's emerging tech ecosystem creates a unique opportunity</p>
+                </div>
+
+                <div class="values-grid">
+                    <div class="card">
+                        <h4 style="color: var(--primary-red); margin-bottom: var(--space-md);">Convergence</h4>
+                        <p style="color: var(--gray-600); line-height: 1.7;">Hybrid Quantum-AI offers tractable near-term advantages in simulation, optimization, cryptography, and sensing.</p>
+                </div>
+
+                    <div class="card">
+                        <h4 style="color: var(--primary-red); margin-bottom: var(--space-md);">Talent Rise</h4>
+                        <p style="color: var(--gray-600); line-height: 1.7;">Indonesia's STEM base and diaspora create a growing founder & researcher pipeline ready for deep-tech.</p>
+                </div>
+
+                    <div class="card">
+                        <h4 style="color: var(--primary-red); margin-bottom: var(--space-md);">Strategic Sectors</h4>
+                        <p style="color: var(--gray-600); line-height: 1.7;">Health, energy, logistics, finance, and security demand step-change computation that quantum enables.</p>
+                </div>
+
+                    <div class="card">
+                        <h4 style="color: var(--primary-red); margin-bottom: var(--space-md);">Market Timing</h4>
+                        <p style="color: var(--gray-600); line-height: 1.7;">NISQ-era and PQC standards are opening billion-dollar "transition markets" today, not tomorrow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Focus Areas -->
+        <section class="section-alt">
+        <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">What We Build</span>
+                    <h2>Focus Areas</h2>
+                </div>
+
+                <div class="values-grid">
+                    <div class="card">
+                        <h4 style="color: var(--primary-red);">Quantum-AI Algorithms & Tooling</h4>
+                        <p style="color: var(--gray-600);">Variational & hybrid methods, error-aware ML</p>
+                </div>
+                    <div class="card">
+                        <h4 style="color: var(--primary-red);">Post-Quantum Security (PQC)</h4>
+                        <p style="color: var(--gray-600);">Crypto agility, key management, secure hardware modules</p>
+                </div>
+                    <div class="card">
+                        <h4 style="color: var(--primary-red);">Quantum-Inspired Optimization</h4>
+                        <p style="color: var(--gray-600);">Portfolio, routing, scheduling, drug design</p>
+                </div>
+                    <div class="card">
+                        <h4 style="color: var(--primary-red);">Quantum Sensing & Metrology</h4>
+                        <p style="color: var(--gray-600);">Materials, non-destructive testing, healthcare</p>
+                </div>
+                    <div class="card">
+                        <h4 style="color: var(--primary-red);">Simulation Platforms</h4>
+                        <p style="color: var(--gray-600);">Materials, battery chemistry, protein & molecular modeling</p>
+                    </div>
+                    <div class="card">
+                        <h4 style="color: var(--primary-red);">Applied Vertical Solutions</h4>
+                        <p style="color: var(--gray-600);">Healthcare, energy, logistics, finance, telecom</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs -->
+        <section id="programs">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">How We Work</span>
+                    <h2>Programs</h2>
+                    <p class="section-description">Multiple pathways to build your Quantum-AI venture</p>
+            </div>
+
+                <div class="values-grid">
+                    <div class="card">
+                        <h4 style="color: var(--primary-red);">Venture Studio (0→1)</h4>
+                        <p style="color: var(--gray-600); line-height: 1.7;">We originate ideas or adopt founder ideas, co-build the product, validate customers, and secure early capital.</p>
+            </div>
+
+                    <div class="card">
+                        <h4 style="color: var(--primary-red);">Founder-in-Residence (FIR)</h4>
+                        <p style="color: var(--gray-600); line-height: 1.7;">Three-to-six-month runway to explore a thesis with QIU engineering, design, and GTM support.</p>
+            </div>
+
+                    <div class="card">
+                        <h4 style="color: var(--primary-red);">Corporate Co-Build</h4>
+                        <p style="color: var(--gray-600); line-height: 1.7;">We partner with enterprises/government to spin out ventures, transfer IP, or build strategic products.</p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Build Process -->
+        <section class="section-alt">
+        <div class="container-narrow">
+                <div class="section-header">
+                    <span class="section-badge">Our Process</span>
+                    <h2>How We Build: 6 Gates</h2>
+                    <p class="section-description">Each gate has exit criteria—we advance only when evidence says "go"</p>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker">1</div>
+                        <h4>Problem Collapse</h4>
+                        <p style="color: var(--gray-600); line-height: 1.7;">Define the sharpest problem/market boundary. No fuzzy problems.</p>
+                </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker">2</div>
+                        <h4>Technical Feasibility</h4>
+                        <p style="color: var(--gray-600); line-height: 1.7;">Proofs, benchmarks, and risk table (TRLs). Can it actually work?</p>
+                </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker">3</div>
+                        <h4>Customer Proof</h4>
+                        <p style="color: var(--gray-600); line-height: 1.7;">Design partner MoUs, pilot LOIs, willingness-to-pay signals.</p>
+                </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker">4</div>
+                        <h4>Product & IP Spine</h4>
+                        <p style="color: var(--gray-600); line-height: 1.7;">MVP, data strategy, freedom-to-operate, patent filings.</p>
+                </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker">5</div>
+                        <h4>Go-to-Market Fit</h4>
+                        <p style="color: var(--gray-600); line-height: 1.7;">Pricing model, repeatable motion, early revenue traction.</p>
+                </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker">6</div>
+                        <h4>Scale & Capital</h4>
+                        <p style="color: var(--gray-600); line-height: 1.7;">Governance structure, hiring plan, growth funding secured.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio">
+        <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">Our Companies</span>
+                    <h2>Portfolio Ventures</h2>
+                </div>
+
+                <div class="venture-card">
+                    <div class="venture-header">
+                        <div class="venture-name">RantAI</div>
+                        <div class="venture-tagline">Agentic AI Company</div>
+                        <a href="https://rantai.dev" target="_blank" rel="noopener noreferrer" class="venture-link">Visit Website →</a>
+                    </div>
+                    <p class="venture-description">Premier System Integrator (SI) specializing in advanced Machine Learning, Deep Learning, and Agentic App Development. RantAI's services include legacy app modernization, software performance optimization, full-stack development, and advanced ML engineering and operations.</p>
+                </div>
+
+                <div class="venture-card">
+                    <div class="venture-header">
+                        <div class="venture-name">Dirac</div>
+                        <div class="venture-tagline">Quantum & Scientific Computing Company</div>
+                        <a href="https://dirac.id" target="_blank" rel="noopener noreferrer" class="venture-link">Visit Website →</a>
+                    </div>
+                    <p class="venture-description">Next-generation agentic AI platform specialized for quantum computing research and development. By combining open-source AI agents with domain expertise, Dirac merges agentic AI with quantum-computing core research. The platform of autonomous agents accelerates quantum R&D, bringing scientific computing out of the lab and into practical problem solving.</p>
+                </div>
+
+                <div class="venture-card">
+                    <div class="venture-header">
+                        <div class="venture-name">Gaussian</div>
+                        <div class="venture-tagline">Digital Twin Company</div>
+                        <a href="https://gaussian.id" target="_blank" rel="noopener noreferrer" class="venture-link">Visit Website →</a>
+                    </div>
+                    <p class="venture-description">Empowers enterprises in finance, HR, supply chain, and strategy with real-time insights, automated processes, and autonomous threat defense. Gaussian unifies AI-driven cybersecurity and high-fidelity digital-twin simulation in a single platform.</p>
+                    <p class="venture-description" style="margin-top: var(--space-md);"><strong>Product Suite:</strong> GaussOS (LLM Operating System), GaussFlow (LLM Apps), GaussAutomate (LLM Automation Engine), GaussData (Data-Intensive Workflow Orchestration)</p>
+                </div>
+
+                <div class="venture-card">
+                    <div class="venture-header">
+                        <div class="venture-name">Nexus Quantum</div>
+                        <div class="venture-tagline">AI Infrastructure Company</div>
+                    </div>
+                    <p class="venture-description">Builds foundational AI infrastructure: platforms that combine quantum-cognition and agentic intelligence to power complex enterprises. From data pipelines to decision engines, enabling scalable AI infrastructure for frontier tech.</p>
+            </div>
+        </div>
+    </section>
+
+        <!-- What Founders Get -->
+        <section class="section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">Benefits</span>
+                    <h2>What Founders Get</h2>
+                </div>
+
+                <div class="values-grid">
+                    <div class="card">
+                        <h4 style="color: var(--primary-red);">🚀 Founding Team Augmentation</h4>
+                        <p style="color: var(--gray-600);">Engineering, product, design, scientific advisors on demand</p>
+                </div>
+                    <div class="card">
+                        <h4 style="color: var(--primary-red);">☁️ Cloud & Compute Credits</h4>
+                        <p style="color: var(--gray-600);">Classical + quantum simulators/hardware access</p>
+                </div>
+                    <div class="card">
+                        <h4 style="color: var(--primary-red);">⚖️ Company Ops</h4>
+                        <p style="color: var(--gray-600);">Legal, IP strategy, finance, hiring, governance support</p>
+                </div>
+                    <div class="card">
+                        <h4 style="color: var(--primary-red);">📈 Revenue Design</h4>
+                        <p style="color: var(--gray-600);">Pricing models, sales playbooks, enterprise access</p>
+                    </div>
+                    <div class="card">
+                        <h4 style="color: var(--primary-red);">💰 Capital Access</h4>
+                        <p style="color: var(--gray-600);">Pre-seed to Seed funding with co-investor network</p>
+                    </div>
+                    <div class="card">
+                        <h4 style="color: var(--primary-red);">🇮🇩 Indonesia-First Advantage</h4>
+                        <p style="color: var(--gray-600);">Regulatory guidance, local pilots, global scale-up path</p>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application -->
+        <section id="application">
+        <div class="container-narrow">
+                <div class="section-header">
+                    <span class="section-badge">Join Us</span>
+                    <h2>Application for Founders</h2>
+                    <p class="section-description">Researchers, engineers, and operators with conviction in Quantum/AI or PQC</p>
+                </div>
+
+                <div style="margin-bottom: var(--space-2xl);">
+            <h3>Who Should Apply</h3>
+                    <p style="color: var(--gray-600); line-height: 1.8; margin-bottom: var(--space-xl);">Founders with unique insight/edge, technical depth, and early validation signals. Clear thesis in a high-value vertical with measurable impact potential.</p>
+
+                    <h3>Application Process</h3>
+                    <div class="process-grid" style="margin-top: var(--space-xl); display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-lg);">
+                        <div class="process-card" style="background: var(--white); border-radius: var(--radius-xl); padding: var(--space-xl); border: 2px solid var(--gray-300); text-align: center; transition: all var(--transition-slow); position: relative;">
+                            <div class="process-number" style="width: 56px; height: 56px; background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red-dark) 100%); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: var(--text-xl); margin: 0 auto var(--space-md); box-shadow: 0 4px 12px rgba(193, 39, 45, 0.3);">1</div>
+                            <h4 style="color: var(--primary-red); margin-bottom: var(--space-sm); font-size: var(--text-xl);">Brief Form</h4>
+                            <p style="color: var(--gray-600); line-height: 1.7; margin: 0;">Submit your initial application online</p>
+                        </div>
+                        
+                        <div class="process-card" style="background: var(--white); border-radius: var(--radius-xl); padding: var(--space-xl); border: 2px solid var(--gray-300); text-align: center; transition: all var(--transition-slow); position: relative;">
+                            <div class="process-number" style="width: 56px; height: 56px; background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red-dark) 100%); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: var(--text-xl); margin: 0 auto var(--space-md); box-shadow: 0 4px 12px rgba(193, 39, 45, 0.3);">2</div>
+                            <h4 style="color: var(--primary-red); margin-bottom: var(--space-sm); font-size: var(--text-xl);">30-min Fit Call</h4>
+                            <p style="color: var(--gray-600); line-height: 1.7; margin: 0;">Initial conversation to assess alignment</p>
+                        </div>
+                        
+                        <div class="process-card" style="background: var(--white); border-radius: var(--radius-xl); padding: var(--space-xl); border: 2px solid var(--gray-300); text-align: center; transition: all var(--transition-slow); position: relative;">
+                            <div class="process-number" style="width: 56px; height: 56px; background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red-dark) 100%); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: var(--text-xl); margin: 0 auto var(--space-md); box-shadow: 0 4px 12px rgba(193, 39, 45, 0.3);">3</div>
+                            <h4 style="color: var(--primary-red); margin-bottom: var(--space-sm); font-size: var(--text-xl);">Deep-dive Session</h4>
+                            <p style="color: var(--gray-600); line-height: 1.7; margin: 0;">Technical and business exploration</p>
+                        </div>
+                        
+                        <div class="process-card" style="background: var(--white); border-radius: var(--radius-xl); padding: var(--space-xl); border: 2px solid var(--gray-300); text-align: center; transition: all var(--transition-slow); position: relative;">
+                            <div class="process-number" style="width: 56px; height: 56px; background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red-dark) 100%); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: var(--text-xl); margin: 0 auto var(--space-md); box-shadow: 0 4px 12px rgba(193, 39, 45, 0.3);">4</div>
+                            <h4 style="color: var(--primary-red); margin-bottom: var(--space-sm); font-size: var(--text-xl);">Offer & Onboarding</h4>
+                            <p style="color: var(--gray-600); line-height: 1.7; margin: 0;">Partnership terms and kickoff</p>
+                        </div>
+                    </div>
+            </div>
+
+                <div style="text-align: center; margin-top: var(--space-3xl);">
+                    <a href="#contact" class="btn btn-primary" style="font-size: var(--text-lg);">Apply to Venture Studio →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs -->
+        <section class="section-alt">
+        <div class="container-narrow">
+                <div class="section-header">
+                    <span class="section-badge">Common Questions</span>
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">Are you an investor or a builder?</div>
+                        <div class="faq-answer">Both. We are a venture builder with capital and a hands-on product/engineering core. We build alongside you, not just fund you.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Do I need quantum hardware access?</div>
+                        <div class="faq-answer">No. We start with simulation and hybrid approaches. We partner for hardware access when the use case requires it.</div>
+                </div>
+
+                <div class="faq-item">
+                        <div class="faq-question">Do you incubate non-Quantum AI ventures?</div>
+                        <div class="faq-answer">Yes—when it compounds into Quantum or PQC roadmaps or solves frontier-class problems that align with our thesis.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Where are you based?</div>
+                        <div class="faq-answer">Indonesia-first, remote-capable, with a global network. We operate where the talent and opportunity are.</div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">What equity stake do you take?</div>
+                        <div class="faq-answer">We typically co-found with minority equity (15-25%) based on the program and level of involvement. Terms are always founder-friendly and aligned with long-term success.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+        <section id="contact">
+        <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">Get in Touch</span>
+                    <h2>Contact Us</h2>
+                    <p class="section-description">Ready to build the future of Quantum-AI? Let's talk.</p>
+                </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                        <div class="contact-icon">🤝</div>
+                    <h4>Partnerships</h4>
+                    <a href="mailto:info@qiu.ventures">info@qiu.ventures</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; <span id="currentYear">2025</span> QIU-Ventures. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#values">Values</a>
+                    <a href="#thesis">Thesis</a>
+                    <a href="#programs">Programs</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fallback for users without JavaScript -->
+    <noscript>
+        <div style="position: fixed; top: 0; left: 0; right: 0; padding: 20px; background: #FFF3CD; border-bottom: 2px solid #FFE69C; text-align: center; z-index: 9999;">
+            <p style="color: #856404; font-weight: 600; margin: 0;">For the best experience, please enable JavaScript in your browser.</p>
+        </div>
+    </noscript>
+
+    <script>
+        // ========================================
+        // INITIALIZATION
+        // ========================================
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current year
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+            // Initialize scroll effects
+            initScrollEffects();
+
+            // Initialize mobile menu
+            initMobileMenu();
+
+            // Initialize smooth scroll
+            initSmoothScroll();
+
+            // Initialize scroll animations
+            initScrollAnimations();
+        });
+
+        // ========================================
+        // SCROLL EFFECTS
+        // ========================================
+        function initScrollEffects() {
+            const header = document.getElementById('header');
+            let lastScroll = 0;
+
+            window.addEventListener('scroll', function() {
+                const currentScroll = window.pageYOffset;
+
+                // Add shadow on scroll
+                if (currentScroll > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+                lastScroll = currentScroll;
+            }, { passive: true });
+        }
+
+        // ========================================
+        // MOBILE MENU
+        // ========================================
+        function initMobileMenu() {
+            const toggle = document.getElementById('mobileMenuToggle');
+            const nav = document.getElementById('mainNav');
+
+            if (!toggle || !nav) return;
+
+            toggle.addEventListener('click', function() {
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !isExpanded);
+                this.classList.toggle('active');
+                nav.classList.toggle('active');
+                document.body.style.overflow = isExpanded ? '' : 'hidden';
+            });
+
+            // Close menu on link click
+            const navLinks = nav.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    toggle.classList.remove('active');
+                    nav.classList.remove('active');
+                    toggle.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            // Close on outside click
+            document.addEventListener('click', function(e) {
+                if (!nav.contains(e.target) && !toggle.contains(e.target) && nav.classList.contains('active')) {
+                    toggle.classList.remove('active');
+                    nav.classList.remove('active');
+                    toggle.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Close on escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && nav.classList.contains('active')) {
+                    toggle.classList.remove('active');
+                    nav.classList.remove('active');
+                    toggle.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                }
+            });
+        }
+
+        // ========================================
+        // SMOOTH SCROLL
+        // ========================================
+        function initSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (!href || href === '#') return;
+
+                    const target = document.querySelector(href);
+                    if (!target) return;
+
+                    e.preventDefault();
+
+                    const headerHeight = document.getElementById('header').offsetHeight;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        }
+
+        // ========================================
+        // SCROLL ANIMATIONS
+        // ========================================
+        function initScrollAnimations() {
+            // Check for Intersection Observer support
+            if (!('IntersectionObserver' in window)) return;
+
+            const observerOptions = {
+                threshold: 0.3,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Observe elements
+            const animateElements = document.querySelectorAll('.card, .value-card, .venture-card, .portfolio-card, .timeline-item, .stat-item');
+            
+            animateElements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = `opacity 0.2s ease ${index * 0.03}s, transform 0.2s ease ${index * 0.03}s`;
+                observer.observe(el);
+            });
+        }
+
+        // ========================================
+        // PERFORMANCE OPTIMIZATION
+        // ========================================
+        // Debounce function for scroll events
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // Preload critical resources
+        function preloadCriticalResources() {
+            const link = document.createElement('link');
+            link.rel = 'preload';
+            link.href = 'qventures.png';
+            link.as = 'image';
+            document.head.appendChild(link);
+        }
+
+        // Initialize performance optimizations
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', preloadCriticalResources);
+        } else {
+            preloadCriticalResources();
+        }
+    </script>
+</body>
+</html>
